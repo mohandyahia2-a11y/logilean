@@ -33,8 +33,7 @@ h1,h2,h3,h4{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.02
 .btn{font-family:'Manrope',sans-serif;font-size:.88rem;font-weight:700;padding:12px 22px;border-radius:8px;border:1.5px solid transparent;display:inline-flex;align-items:center;gap:8px;cursor:pointer;white-space:nowrap;transition:all .16s;}
 .btn svg{width:15px;height:15px;flex-shrink:0;}
 .btn-navy{background:var(--navy);color:#fff;border-color:var(--navy);} .btn-navy:hover{background:var(--navy2);}
-.btn-wa{background:var(--green);color:#fff;border-color:var(--green);} .btn-wa:hover{background:#16A34A;}
-.btn-out{border-color:rgba(255,255,255,.3);color:#fff;background:transparent;} .btn-out:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+.btn-out{border-color:var(--line);color:var(--navy);background:transparent;} .btn-out:hover{border-color:var(--mid);background:var(--bg);}
 .btn-out-dark{border-color:var(--line);color:var(--navy);background:var(--white);} .btn-out-dark:hover{border-color:var(--mid);}
 .btn-sm{padding:9px 16px;font-size:.82rem;}
 
@@ -53,7 +52,7 @@ h1,h2,h3,h4{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.02
 .mobile-menu a:last-child{border-bottom:none;}
 .mobile-menu a:hover{color:#fff;}
 @media(max-width:960px){.nav-links{display:none;}.hamburger{display:flex;}.nav-cta .btn-out{display:none;}}
-@media(max-width:640px){.nav-cta .btn-wa span{display:none;}}
+@media(max-width:640px){}
 
 /* ── HERO ── */
 .hero{position:relative;padding:120px 5vw 72px;overflow:hidden;}
@@ -66,8 +65,8 @@ h1,h2,h3,h4{font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:-.02
 .hero h1 em{font-style:normal;color:#7DBFFF;}
 .hero .lead{color:#B8CFEA;font-size:.98rem;line-height:1.7;max-width:500px;margin-bottom:28px;}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:36px;}
-.avail{display:inline-flex;border:1px solid rgba(255,255,255,.15);border-radius:30px;overflow:hidden;margin-bottom:32px;}
-.ap{display:flex;align-items:center;gap:6px;padding:7px 14px;font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.6);border-right:1px solid rgba(255,255,255,.12);}
+.avail{display:inline-flex;border:1px solid var(--line);border-radius:30px;overflow:hidden;margin-bottom:32px;}
+.ap{display:flex;align-items:center;gap:6px;padding:7px 14px;font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);border-right:1px solid var(--line);}
 .ap:last-child{border-right:none;}
 .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
 .dot.g{background:var(--green);box-shadow:0 0 0 3px rgba(34,197,94,.22);animation:blink 2s infinite;}
@@ -123,7 +122,7 @@ h2{font-size:clamp(1.8rem,2.6vw,2.4rem);color:var(--navy);margin-bottom:12px;}
 .ccard:hover .ccard-img{opacity:1;}
 .ccard-body{padding:26px 24px;}
 .cbadge{font-family:'JetBrains Mono',monospace;font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:20px;margin-bottom:14px;}
-.cbadge-green{background:#DCFCE7;color:#16A34A;} .cbadge-blue{background:var(--ice);color:var(--mid);}
+.cbadge-green{background:#DCFCE7;color:var(--green);} .cbadge-blue{background:var(--ice);color:var(--mid);}
 .ccard h3{font-size:1.15rem;color:var(--navy);margin-bottom:8px;}
 .ccard p{color:var(--muted);font-size:.9rem;line-height:1.65;margin-bottom:18px;}
 .crow-list{border-top:1px solid var(--line);}
@@ -242,7 +241,7 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
 .footer-copy{font-size:.76rem;color:rgba(255,255,255,.25);}
 
 /* ── WA ── */
-.wa{position:fixed;bottom:22px;right:22px;z-index:60;width:52px;height:52px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .16s;}
+
 .wa:hover{transform:scale(1.08);}
 .wa svg{width:26px;height:26px;fill:#fff;}
 
@@ -281,48 +280,48 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
 .mat-process p{color:#B8CFEA;font-size:.88rem;line-height:1.6;}
 
 /* ── HERO CONCEPT 2 — SEGMENTATION ── */
-.hero-c2{position:relative;background:linear-gradient(150deg,#0E2741 0%,var(--navy) 55%,var(--mid) 100%);padding:118px 5vw 72px;overflow:hidden;}
-.hero-c2::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;}
-.hero-c2-glow{position:absolute;top:-10%;right:-5%;width:50%;height:90%;background:radial-gradient(ellipse at center,rgba(45,125,210,.14),transparent 65%);pointer-events:none;}
+.hero-c2{position:relative;background:#fff;padding:118px 5vw 72px;overflow:hidden;border-bottom:1px solid var(--line);}
+.hero-c2::before{content:"";position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;opacity:.35;pointer-events:none;}
+.hero-c2-glow{position:absolute;top:-10%;right:-5%;width:50%;height:90%;background:radial-gradient(ellipse at center,rgba(45,125,210,.07),transparent 65%);pointer-events:none;}
 .hero-c2-inner{position:relative;z-index:1;max-width:1200px;margin:0 auto;}
 .hero-c2-top{text-align:center;margin-bottom:48px;}
-.hero-c2-over{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:14px;}
-.hero-c2-h1{font-family:'Manrope',sans-serif;font-size:clamp(2.2rem,4.8vw,4rem);font-weight:900;color:#fff;line-height:1.06;letter-spacing:-.03em;margin-bottom:14px;}
-.hero-c2-h1 em{font-style:normal;color:#7DBFFF;}
-.hero-c2-sub{color:rgba(255,255,255,.5);font-size:.97rem;max-width:560px;margin:0 auto 28px;line-height:1.6;}
+.hero-c2-over{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;font-weight:600;}
+.hero-c2-h1{font-family:'Manrope',sans-serif;font-size:clamp(2.2rem,4.8vw,4rem);font-weight:900;color:var(--navy);line-height:1.06;letter-spacing:-.03em;margin-bottom:14px;}
+.hero-c2-h1 em{font-style:normal;color:var(--blue);}
+.hero-c2-sub{color:var(--text);font-size:.97rem;max-width:560px;margin:0 auto 28px;line-height:1.6;}
 /* Pills disponibilité */
 .hero-avail{display:inline-flex;border:1px solid rgba(255,255,255,.15);border-radius:30px;overflow:hidden;margin-bottom:0;}
-.hero-avail .ap{display:flex;align-items:center;gap:6px;padding:7px 14px;font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.07em;text-transform:uppercase;color:rgba(255,255,255,.55);border-right:1px solid rgba(255,255,255,.12);}
+.hero-avail .ap{display:flex;align-items:center;gap:6px;padding:7px 14px;font-family:'JetBrains Mono',monospace;font-size:.63rem;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);border-right:1px solid rgba(255,255,255,.12);}
 .hero-avail .ap:last-child{border-right:none;}
 /* Cartes profil */
 .hero-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:40px;}
 @media(max-width:860px){.hero-cards{grid-template-columns:1fr;gap:14px;}}
-.hc2-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.1);border-radius:16px;padding:28px 26px;transition:all .22s;cursor:pointer;position:relative;}
-.hc2-card:hover{background:rgba(255,255,255,.11);border-color:rgba(45,125,210,.6);transform:translateY(-3px);box-shadow:0 18px 40px rgba(0,0,0,.3);}
-.hc2-card.feat{border-color:rgba(34,197,94,.4);background:rgba(34,197,94,.06);}
-.hc2-card.feat:hover{border-color:rgba(34,197,94,.7);background:rgba(34,197,94,.1);}
+.hc2-card{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:28px 26px;transition:transform .22s ease,box-shadow .22s ease;cursor:pointer;position:relative;box-shadow:0 2px 12px rgba(22,58,99,.08);}
+.hc2-card:hover{background:#fff;border-color:var(--line);transform:scale(1.03);box-shadow:0 12px 32px rgba(22,58,99,.12);}
+.hc2-card.feat{border-color:var(--green);background:#fff;}
+.hc2-card.feat:hover{border-color:var(--green);background:#fff;}
 .hc2-badge{position:absolute;top:-1px;right:18px;background:var(--green);color:#fff;font-family:'JetBrains Mono',monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.08em;padding:3px 10px;border-radius:0 0 8px 8px;}
 .hc2-icon{width:48px;height:48px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:16px;flex-shrink:0;}
-.hc2-icon.blue{background:rgba(45,125,210,.25);}
-.hc2-icon.green{background:rgba(34,197,94,.2);}
-.hc2-icon.purple{background:rgba(139,92,246,.2);}
-.hc2-card h3{font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:800;color:#fff;margin-bottom:9px;line-height:1.2;}
-.hc2-card p{color:rgba(255,255,255,.55);font-size:.86rem;line-height:1.6;margin-bottom:14px;}
-.hc2-card ul{list-style:none;font-size:.81rem;color:rgba(255,255,255,.5);}
-.hc2-card ul li{padding:5px 0;border-top:1px solid rgba(255,255,255,.08);display:flex;gap:7px;}
+.hc2-icon.blue{background:rgba(45,125,210,.4);}
+.hc2-icon.green{background:rgba(34,197,94,.3);}
+.hc2-icon.purple{background:rgba(139,92,246,.3);}
+.hc2-card h3{font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:800;color:var(--navy);margin-bottom:9px;line-height:1.2;}
+.hc2-card p{color:var(--muted);font-size:.86rem;line-height:1.6;margin-bottom:14px;}
+.hc2-card ul{list-style:none;font-size:.81rem;color:var(--muted);}
+.hc2-card ul li{padding:5px 0;border-top:1px solid var(--line);display:flex;gap:7px;}
 .hc2-card ul li::before{content:"→";color:var(--blue);flex-shrink:0;}
 .hc2-card.feat ul li::before{color:var(--green);}
-.hc2-cta{display:inline-flex;margin-top:18px;align-items:center;gap:7px;font-family:'Manrope',sans-serif;font-size:.82rem;font-weight:700;color:#7DBFFF;letter-spacing:.01em;}
-.hc2-card.feat .hc2-cta{color:#4ADE80;}
+.hc2-cta{display:inline-flex;margin-top:18px;align-items:center;gap:7px;font-family:'Manrope',sans-serif;font-size:.82rem;font-weight:700;color:var(--blue);letter-spacing:.01em;}
+.hc2-card.feat .hc2-cta{color:var(--green);}
 .hc2-cta::after{content:"→";transition:transform .18s;}
 .hc2-card:hover .hc2-cta::after{transform:translateX(4px);}
 /* Stats bas */
-.hero-c2-bottom{display:flex;justify-content:center;align-items:center;gap:0;border-top:1px solid rgba(255,255,255,.1);padding-top:28px;flex-wrap:wrap;}
-.hero-c2-stat{text-align:center;padding:0 28px;border-right:1px solid rgba(255,255,255,.12);}
+.hero-c2-bottom{display:flex;justify-content:center;align-items:center;gap:0;border-top:1px solid var(--line);padding-top:28px;flex-wrap:wrap;}
+.hero-c2-stat{text-align:center;padding:0 28px;border-right:1px solid var(--line);}
 .hero-c2-stat:last-child{border-right:none;}
-.hero-c2-stat .n{font-family:'Manrope',sans-serif;font-weight:900;font-size:1.7rem;color:#fff;line-height:1;}
-.hero-c2-stat .n em{font-style:normal;color:#7DBFFF;}
-.hero-c2-stat .l{font-size:.65rem;color:rgba(255,255,255,.38);text-transform:uppercase;letter-spacing:.05em;margin-top:3px;}
+.hero-c2-stat .n{font-family:'Manrope',sans-serif;font-weight:900;font-size:1.7rem;color:var(--navy);line-height:1;}
+.hero-c2-stat .n em{font-style:normal;color:var(--blue);}
+.hero-c2-stat .l{font-size:.65rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em;margin-top:3px;}
 /* CTAs globaux sous les cartes */
 .hero-c2-ctas{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:36px;}
 @media(max-width:480px){.hero-c2-stat{padding:12px 16px;}.hero-c2-h1{font-size:2rem;letter-spacing:-.02em;}}
@@ -377,6 +376,75 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
 .btn-dl-main:hover{background:var(--ice);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.25);}
 .btn-dl-main svg{width:18px;height:18px;flex-shrink:0;color:var(--blue);}
 .res-sub{font-size:.74rem;color:rgba(255,255,255,.4);text-align:center;}
+
+/* Float email */
+.float-email{position:fixed;bottom:22px;right:22px;z-index:60;width:52px;height:52px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.25);transition:transform .16s;}
+.float-email:hover{transform:scale(1.08);}
+.float-email svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2;}
+
+/* ── MODAL CONTACT ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(14,39,65,.65);backdrop-filter:blur(4px);z-index:200;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal-box{background:#fff;border-radius:18px;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;box-shadow:0 24px 60px rgba(0,0,0,.3);animation:modalIn .22s ease;}
+@keyframes modalIn{from{transform:translateY(20px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+.modal-head{background:var(--navy);padding:28px 28px 24px;border-radius:18px 18px 0 0;position:relative;}
+.modal-head h3{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.2rem;color:#fff;margin-bottom:4px;}
+.modal-head p{color:#B8CFEA;font-size:.87rem;}
+.modal-close{position:absolute;top:16px;right:18px;background:none;border:none;color:rgba(255,255,255,.6);font-size:1.4rem;cursor:pointer;line-height:1;padding:4px 8px;border-radius:6px;}
+.modal-close:hover{color:#fff;background:rgba(255,255,255,.1);}
+.modal-body{padding:26px 28px;}
+.mfield{margin-bottom:16px;}
+.mfield label{display:block;font-family:'Manrope',sans-serif;font-weight:600;font-size:.83rem;color:var(--navy);margin-bottom:5px;}
+.mfield label .req{color:#DC2626;margin-left:2px;}
+.mfield input,.mfield textarea,.mfield select{width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:8px;font-family:'Inter',sans-serif;font-size:.9rem;color:var(--text);outline:none;transition:border-color .16s;background:#fff;}
+.mfield input:focus,.mfield textarea:focus,.mfield select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(45,125,210,.12);}
+.mfield input.invalid{border-color:#DC2626;}
+.mfield textarea{resize:vertical;min-height:88px;}
+.mfield select option[value=""]{color:var(--m2);}
+.mfield-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:500px){.mfield-row{grid-template-columns:1fr;}}
+.modal-foot{padding:0 28px 26px;display:flex;gap:12px;align-items:center;}
+.modal-submit{flex:1;padding:13px;background:var(--navy);color:#fff;border:none;border-radius:8px;font-family:'Manrope',sans-serif;font-weight:700;font-size:.95rem;cursor:pointer;transition:background .16s;}
+.modal-submit:hover{background:#0E2741;}
+.modal-cancel{padding:13px 18px;background:none;border:1.5px solid var(--line);border-radius:8px;font-family:'Manrope',sans-serif;font-weight:600;font-size:.88rem;color:var(--muted);cursor:pointer;}
+.modal-cancel:hover{border-color:var(--navy);color:var(--navy);}
+.modal-note{padding:0 28px 20px;font-size:.78rem;color:var(--m2);line-height:1.5;}
+.modal-note a{color:var(--blue);}
+
+/* MODAL CONTACT */
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(14,39,65,.7);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal{background:#fff;border-radius:16px;width:100%;max-width:520px;box-shadow:0 32px 80px rgba(0,0,0,.3);overflow:hidden;animation:modalIn .22s ease;}
+@keyframes modalIn{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.modal-head{background:var(--navy);padding:24px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.modal-head h3{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.1rem;color:#fff;margin:0;}
+.modal-head p{color:rgba(255,255,255,.55);font-size:.8rem;margin-top:3px;}
+.modal-close{width:32px;height:32px;background:rgba(255,255,255,.12);border:none;border-radius:8px;cursor:pointer;color:#fff;font-size:1.1rem;line-height:32px;text-align:center;flex-shrink:0;transition:background .16s;}
+.modal-close:hover{background:rgba(255,255,255,.22);}
+.modal-body{padding:28px 28px 16px;}
+.mfield{margin-bottom:16px;}
+.mfield label{display:block;font-family:'Manrope',sans-serif;font-size:.82rem;font-weight:700;color:var(--navy);margin-bottom:6px;}
+.mfield .req{color:var(--blue);margin-left:2px;}
+.mfield .opt{color:var(--m2);font-weight:400;font-size:.76rem;margin-left:4px;}
+.mfield input,.mfield textarea,.mfield select{width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:8px;font-family:'Inter',sans-serif;font-size:.9rem;color:var(--text);background:#fff;outline:none;transition:border-color .16s;box-sizing:border-box;}
+.mfield input:focus,.mfield textarea:focus,.mfield select:focus{border-color:var(--blue);}
+.mfield input.error{border-color:#DC2626;}
+.err-msg{font-size:.78rem;color:#DC2626;margin-top:4px;display:none;}
+.show-err{display:block;}
+.mfield textarea{resize:vertical;min-height:90px;}
+.mfield-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:500px){.mfield-row{grid-template-columns:1fr;}}
+.modal-foot{padding:0 28px 24px;display:flex;gap:12px;}
+.btn-submit{flex:1;padding:13px;background:var(--navy);color:#fff;border:none;border-radius:8px;font-family:'Manrope',sans-serif;font-weight:700;font-size:.92rem;cursor:pointer;transition:background .16s;display:flex;align-items:center;justify-content:center;gap:8px;}
+.btn-submit:hover{background:#0E2741;}
+.btn-submit svg{width:15px;height:15px;flex-shrink:0;}
+.btn-cancel{padding:13px 20px;background:var(--bg);color:var(--muted);border:1.5px solid var(--line);border-radius:8px;font-family:'Manrope',sans-serif;font-weight:600;font-size:.88rem;cursor:pointer;transition:all .16s;}
+.btn-cancel:hover{border-color:var(--navy);color:var(--navy);}
+.modal-success{text-align:center;padding:36px 28px;display:none;}
+.modal-success.active{display:block;}
+.modal-success .s-icon{width:56px;height:56px;background:#DCFCE7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.5rem;}
+.modal-success h4{font-family:'Manrope',sans-serif;font-size:1.1rem;color:var(--navy);margin-bottom:8px;}
+.modal-success p{color:var(--muted);font-size:.88rem;line-height:1.6;}
 </style>
 </head>
 <body>
@@ -396,8 +464,8 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
     <a href="#contact">Contact</a>
   </nav>
   <div class="nav-cta">
-    <a class="btn btn-out" href="https://calendly.com/mohand-yahia" target="_blank" rel="noopener">Calendly</a>
-    <a class="btn btn-wa" href="https://wa.me/213559711145" target="_blank" rel="noopener"><span>WhatsApp</span></a>
+    
+    <a class="btn btn-navy" href="#" onclick="openModal();return false;" style="background:#163A63;border-color:#163A63;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg><span>Email</span></a>
   </div>
   <button class="hamburger" id="hbg" aria-label="Menu" onclick="document.getElementById('mmenu').classList.toggle('open');this.classList.toggle('active');">
     <span></span><span></span><span></span>
@@ -476,11 +544,11 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
 
     <!-- CTAs globaux -->
     <div class="hero-c2-ctas">
-      <a class="btn btn-wa" href="https://wa.me/213559711145" target="_blank" rel="noopener">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.2-.6.9-.8 1.1-.1.2-.3.2-.5.1-1.4-.6-2.4-1.4-3.3-2.8-.1-.2-.1-.4.1-.6l.5-.7c.1-.2.1-.4 0-.6-.1-.2-.6-1.5-.8-2-.1-.4-.3-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.5-1 2.5.1 1.2.6 2.4 1.5 3.6 1.6 2 3.5 3.2 5.8 3.7.6.1 1.2.1 1.7-.1.6-.2 1.6-.8 1.8-1.5.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.2L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
-        Discuter maintenant
+      <a class="btn btn-navy" href="#" onclick="openModal();return false;">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+        Envoyer un email
       </a>
-      <a class="btn btn-out" href="https://calendly.com/mohand-yahia" target="_blank" rel="noopener">Réserver un appel gratuit</a>
+      
     </div>
 
     <!-- Stats -->
@@ -510,14 +578,14 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
         <div class="crow-list">
           <div class="crow"><span class="k">Disponibilité</span><span class="v on">● Disponible — 2 semaines</span></div>
           <div class="crow"><span class="k">Périmètre</span><span class="v">Conception → Go-live</span></div>
-          <div class="crow"><span class="k">Interfaces</span><span class="v">ERP · SAP · WCS</span></div>
+          <div class="crow"><span class="k">Interventions</span><span class="v">Formation, Accompagnement paramétrage, Test UAT</span></div>
           <div class="crow"><span class="k">Formule</span><span class="v">Mission ponctuelle ou retainer</span></div>
         </div>
         <div class="vtags">
           <span class="vtag">Reflex 9.17</span><span class="vtag">9.20 WCS</span><span class="vtag">Web 9.23</span><span class="vtag">for Factory</span><span class="vtag">Reflex &amp; Click</span>
         </div>
         <div class="ccard-footer">
-          <a class="btn btn-navy" href="https://wa.me/213559711145" target="_blank" rel="noopener">Demander un devis</a>
+          <a class="btn btn-navy" href="#" onclick="openModal();return false;">Écrire par email</a>
         </div>
       </div>
     </div>
@@ -536,8 +604,8 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
           <div class="s3"><div class="sn">03</div><h5>48h</h5><p>CV + refs + dispo</p></div>
         </div>
         <div class="ccard-footer">
-          <a class="btn btn-navy" href="https://wa.me/213559711145" target="_blank" rel="noopener">Envoyer un brief</a>
-          <a class="btn btn-out-dark btn-sm" href="https://wa.me/213559711145" target="_blank" rel="noopener">Rejoindre le réseau</a>
+          <a class="btn btn-navy" href="#" onclick="openModal();return false;">Envoyer par email</a>
+          <a class="btn btn-out-dark btn-sm" href="#" onclick="openModal();return false;">Rejoindre le réseau</a>
         </div>
       </div>
     </div>
@@ -612,7 +680,7 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
       </div>
       <div class="fo-notice">
         <p><strong>Qualiopi · Masters logistique · Entreprises</strong> — Modules SCORM compatibles LMS (Moodle, 360Learning). Convention vacataire ou prestation.</p>
-        <a class="btn btn-navy btn-sm" href="https://wa.me/213559711145" target="_blank" rel="noopener">Parler du programme</a>
+        <a class="btn btn-navy btn-sm" href="#" onclick="openModal();return false;">Écrire par email</a>
       </div>
 
       <!-- Téléchargement des brochures -->
@@ -713,8 +781,8 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
   </div>
 
   <div style="margin-top:20px;display:flex;gap:10px;">
-    <a class="btn btn-navy" href="https://wa.me/213559711145" target="_blank" rel="noopener">Discuter d'une mission AMOA</a>
-    <a class="btn btn-out-dark" href="https://calendly.com/mohand-yahia" target="_blank" rel="noopener">Réserver un appel</a>
+    <a class="btn btn-navy" href="#" onclick="openModal();return false;">Écrire par email</a>
+    
   </div>
 </section>
 
@@ -820,7 +888,7 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
       <h4>De l'expression du besoin à la mise en service</h4>
       <p>Audit terrain → Cahier des charges → Consultation fournisseurs → Coordination installation → Recette &amp; formation. Un seul interlocuteur pour l'ensemble du périmètre matériel.</p>
     </div>
-    <a class="btn btn-wa" href="https://wa.me/213559711145" target="_blank" rel="noopener">Parler de votre projet</a>
+    <a class="btn btn-navy" href="#" onclick="openModal();return false;">Écrire par email</a>
   </div>
 </section>
 
@@ -1006,15 +1074,15 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
       <h2>Un projet WMS à lancer,<br>une formation à monter ?</h2>
       <p class="lead">Premier échange de 30 min gratuit et sans engagement — je réponds sous 24h.</p>
       <div class="contact-ctas">
-        <a class="btn btn-navy" href="mailto:mohand.yahia2@gmail.com" style="background:#163A63;color:#fff;border-color:#163A63;">
+        <a class="btn btn-navy" href="#" onclick="openModal();return false;" style="background:#163A63;color:#fff;border-color:#163A63;">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
           Envoyer un email
         </a>
-        <a class="btn btn-wa" href="https://wa.me/213559711145" target="_blank" rel="noopener">WhatsApp direct</a>
-        <a class="btn btn-out" href="https://calendly.com/mohand-yahia" target="_blank" rel="noopener">Réserver sur Calendly</a>
+        <a class="btn btn-navy" href="#" onclick="openModal();return false;">Email direct</a>
+        
       </div>
       <div class="contact-detail">
-        <div class="ci"><div class="k">Email</div><div class="v"><a href="mailto:mohand.yahia2@gmail.com">mohand.yahia2@gmail.com</a></div></div>
+        <div class="ci"><div class="k">Email</div><div class="v"><a href="#" onclick="openModal();return false;">mohand.yahia2@gmail.com</a></div></div>
         <div class="ci"><div class="k">Algérie</div><div class="v"><a href="tel:+213559711145">+213 (0)5 59 71 11 45</a></div></div>
         <div class="ci"><div class="k">France</div><div class="v"><a href="tel:+33651210213">+33 (0)6 51 21 02 13</a></div></div>
         <div class="ci"><div class="k">Remote</div><div class="v online">Disponible maintenant</div></div>
@@ -1039,7 +1107,7 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
           <option>Autre</option>
         </select>
         <textarea placeholder="Décrivez votre besoin en quelques lignes..."></textarea>
-        <button type="submit" class="btn btn-wa" style="justify-content:center;">Envoyer le message</button>
+        <button type="submit" class="btn btn-navy" style="justify-content:center;">Envoyer le message</button>
       </form>
     </div>
   </div>
@@ -1051,9 +1119,6 @@ footer{background:var(--navy2);padding:22px 5vw;display:flex;justify-content:spa
   <div class="footer-copy">© 2026 Logilean — Mohand Yahia · Béjaïa · Alger · France</div>
 </footer>
 
-<a class="wa" href="https://wa.me/213559711145" target="_blank" rel="noopener" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.2-.6.9-.8 1.1-.1.2-.3.2-.5.1-1.4-.6-2.4-1.4-3.3-2.8-.1-.2-.1-.4.1-.6l.5-.7c.1-.2.1-.4 0-.6-.1-.2-.6-1.5-.8-2-.1-.4-.3-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.5-1 2.5.1 1.2.6 2.4 1.5 3.6 1.6 2 3.5 3.2 5.8 3.7.6.1 1.2.1 1.7-.1.6-.2 1.6-.8 1.8-1.5.2-.6.2-1.1.1-1.2-.1-.1-.3-.2-.6-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.7 1.5 5.2L2 22l4.9-1.3C8.4 21.5 10.2 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3C4.4 15 4 13.5 4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8z"/></svg>
-</a>
 
 <script>
 function closeMM(){document.getElementById('mmenu').classList.remove('open');document.getElementById('hbg').classList.remove('active');}
@@ -1064,11 +1129,209 @@ function handleForm(e){
   btn.disabled=true;
   setTimeout(()=>{btn.textContent='Envoyer le message';btn.disabled=false;e.target.reset();},3000);
 }
-document.addEventListener('click',function(e){
-  const mm=document.getElementById('mmenu');
-  const hbg=document.getElementById('hbg');
-  if(mm.classList.contains('open')&&!mm.contains(e.target)&&!hbg.contains(e.target)){closeMM();}
+
+// ── MODAL ──────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', function() {
+
+function openModal(){
+  var m=document.getElementById('contactModal');
+  if(!m)return;
+  m.classList.add('open');
+  document.body.style.overflow='hidden';
+  setTimeout(function(){
+    var el=document.getElementById('m_email');
+    if(el)el.focus();
+  },120);
+}
+function closeModal(){
+  var m=document.getElementById('contactModal');
+  if(!m)return;
+  m.classList.remove('open');
+  document.body.style.overflow='';
+  var fw=document.getElementById('mFormWrap');
+  var ms=document.getElementById('mSuccess');
+  if(fw)fw.style.display='block';
+  if(ms)ms.classList.remove('active');
+  var em=document.getElementById('m_email');
+  var ee=document.getElementById('m_email_err');
+  if(em){em.classList.remove('error');em.value='';}
+  if(ee)ee.classList.remove('show-err');
+  ['m_nom','m_soc','m_msg'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.value='';
+  });
+  var ob=document.getElementById('m_objet');
+  if(ob)ob.selectedIndex=0;
+}
+function submitModal(){
+  var emailEl=document.getElementById('m_email');
+  if(!emailEl)return;
+  var email=emailEl.value.trim();
+  var re=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if(!email||!re.test(email)){
+    emailEl.classList.add('error');
+    var ee=document.getElementById('m_email_err');
+    if(ee)ee.classList.add('show-err');
+    emailEl.focus();
+    return;
+  }
+  emailEl.classList.remove('error');
+  var ee=document.getElementById('m_email_err');
+  if(ee)ee.classList.remove('show-err');
+  var nom =(document.getElementById('m_nom')||{}).value||'';
+  var soc =(document.getElementById('m_soc')||{}).value||'';
+  var objet=(document.getElementById('m_objet')||{}).value||'Demande d\'information';
+  var msg =(document.getElementById('m_msg')||{}).value||'';
+  nom=nom.trim();soc=soc.trim();objet=objet.trim();msg=msg.trim();
+  var from=nom?(nom+(soc?' ('+soc+')':'')):soc;
+  var body=(from?'De : '+from+'\n':'')+'Email : '+email+(msg?'\n\n'+msg:'');
+  var subject=encodeURIComponent('[Logilean] '+objet);
+  var bodyEnc=encodeURIComponent(body);
+  window.location.href='mailto:mohand.yahia2@gmail.com?subject='+subject+'&body='+bodyEnc+'&cc='+encodeURIComponent(email);
+  var fw=document.getElementById('mFormWrap');
+  var ms=document.getElementById('mSuccess');
+  if(fw)fw.style.display='none';
+  if(ms)ms.classList.add('active');
+  setTimeout(closeModal,5000);
+}
+
+// Exposer globalement
+window.openModal=openModal;
+window.closeModal=closeModal;
+window.submitModal=submitModal;
+
+// Fermer en cliquant l'overlay
+var modal=document.getElementById('contactModal');
+if(modal){
+  modal.addEventListener('click',function(e){
+    if(e.target===this)closeModal();
+  });
+}
+// Echap
+document.addEventListener('keydown',function(e){
+  if(e.key==='Escape')closeModal();
 });
+
+}); // DOMContentLoaded
 </script>
+
+<a class="float-email" href="#" onclick="openModal();return false;" aria-label="Envoyer un email">
+  <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+</a>
+
+<!-- MODAL CONTACT -->
+<div class="modal-overlay" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <div class="modal-head">
+      <button class="modal-close" onclick="closeModal()" aria-label="Fermer">×</button>
+      <h3 id="modalTitle">Demande d'information</h3>
+      <p>Décrivez votre besoin — je vous réponds sous 24h ouvrées.</p>
+    </div>
+    <form class="modal-body" id="contactForm" onsubmit="submitModal(event)" novalidate>
+      <div class="mfield">
+        <label>Adresse email <span class="req">*</span></label>
+        <input type="email" id="m_email" placeholder="votre@email.com" required autocomplete="email">
+      </div>
+      <div class="mfield-row">
+        <div class="mfield">
+          <label>Prénom / Nom</label>
+          <input type="text" id="m_name" placeholder="Mohand Yahia" autocomplete="name">
+        </div>
+        <div class="mfield">
+          <label>Société</label>
+          <input type="text" id="m_company" placeholder="Logilean" autocomplete="organization">
+        </div>
+      </div>
+      <div class="mfield">
+        <label>Téléphone</label>
+        <input type="tel" id="m_phone" placeholder="+33 6 xx xx xx xx" autocomplete="tel">
+      </div>
+      <div class="mfield">
+        <label>Objet de votre demande</label>
+        <select id="m_subject">
+          <option value="">Sélectionner...</option>
+          <option>Déploiement WMS Reflex — remote</option>
+          <option>Placement consultant terrain</option>
+          <option>AMOA / Pilotage de projet</option>
+          <option>Formation logistique / WMS</option>
+          <option>Matériels &amp; solutions intralogistique</option>
+          <option>Autre demande</option>
+        </select>
+      </div>
+      <div class="mfield">
+        <label>Votre message</label>
+        <textarea id="m_message" placeholder="Décrivez votre besoin, votre contexte, vos délais..."></textarea>
+      </div>
+    </form>
+    <div class="modal-foot">
+      <button class="modal-cancel" onclick="closeModal()">Annuler</button>
+      <button class="modal-submit" onclick="submitModal(event)">
+        Envoyer ma demande →
+      </button>
+    </div>
+    <p class="modal-note">Les champs marqués <span style="color:#DC2626;">*</span> sont obligatoires. Vos données sont utilisées uniquement pour répondre à votre demande.</p>
+  </div>
+</div>
+
+
+<!-- MODAL -->
+<div class="modal-overlay" id="contactModal">
+  <div class="modal">
+    <div class="modal-head">
+      <div>
+        <h3>Demande d&apos;information</h3>
+        <p>R&eacute;ponse sous 24h ouvrées</p>
+      </div>
+      <button class="modal-close" onclick="closeModal()">&#x2715;</button>
+    </div>
+    <div id="mFormWrap">
+      <div class="modal-body">
+        <div class="mfield-row">
+          <div class="mfield">
+            <label>Nom <span class="opt">(optionnel)</span></label>
+            <input type="text" id="m_nom" placeholder="Votre nom">
+          </div>
+          <div class="mfield">
+            <label>Société <span class="opt">(optionnel)</span></label>
+            <input type="text" id="m_soc" placeholder="Votre entreprise">
+          </div>
+        </div>
+        <div class="mfield">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" id="m_email" placeholder="votre.email@entreprise.com">
+          <div class="err-msg" id="m_email_err">Veuillez saisir une adresse email valide.</div>
+        </div>
+        <div class="mfield">
+          <label>Objet <span class="opt">(optionnel)</span></label>
+          <select id="m_objet">
+            <option value="">Sélectionner un objet</option>
+            <option>Projet WMS Reflex — remote</option>
+            <option>Placement consultant terrain</option>
+            <option>Formation logistique / WMS</option>
+            <option>AMOA et pilotage de projet</option>
+            <option>Matériels et solutions intralogistique</option>
+            <option>Autre demande</option>
+          </select>
+        </div>
+        <div class="mfield">
+          <label>Message <span class="opt">(optionnel)</span></label>
+          <textarea id="m_msg" placeholder="Décrivez votre besoin en quelques lignes..."></textarea>
+        </div>
+      </div>
+      <div class="modal-foot">
+        <button class="btn-cancel" onclick="closeModal()">Annuler</button>
+        <button class="btn-submit" onclick="submitModal()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+          Envoyer ma demande
+        </button>
+      </div>
+    </div>
+    <div class="modal-success" id="mSuccess">
+      <div class="s-icon">✅</div>
+      <h4>Message en cours d&apos;envoi !</h4>
+      <p>Votre client email va s&apos;ouvrir.<br>Si rien ne se passe, écrivez directement à<br><strong>mohand.yahia2@gmail.com</strong></p>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
